@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Brick Breaker Game</title>
+    <link rel="icon" href="images/brick.png">
+    <!--included google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--included icons from fontawesome.com-->
+    <script src="https://kit.fontawesome.com/423fda78fd.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--loading screen-->
+    <div class="loadingpage">
+      <h1 class="loadtext">THE BRICK BREAKER GAME</h1>
+    </div>
+
+    <!--page header-->
+    <div class="header">
+      <h1>The Brick Breaker Game</h1>
+    </div>
+
+    <!--main section-->
+    <div class="mainsrceen">
+      <!--panel subsection-->
+      <div class="panel">
+        <div class="panelHead">SELECT LEVEL
+          <div id="levels">
+            <button onclick="setGame(4,120)">Easy</button>
+            <button onclick="setGame(6,110)">Medium</button>
+            <button onclick="setGame(7,100)">Hard</button>
+          </div>
+        </div>
+        <div class="panelHead" onclick="reload()">RESTART</div>
+        <div class="panelHead">INSTRUCTIONS
+          <p id="instructions">Use arrow keys [pro]<br> OR <br> Mouse dragover [noob] </p>
+        </div>
+        <div id="score"> Score: 0</div>
+      </div>
+      <!--game su section-->
+      <div class="game">
+          <!--canvas for brick display-->
+          <canvas id="brickCanvas" width="750px" height="500px"></canvas>
+      </div>
+    </div>
+
+    <!--endgame message-->
+    <div id="gameover" onclick="reload()">
+      <h1>Well played! Try again :)</h1>
+    </div>
+    <div id="winner" onclick="reload()">
+      <h1>You are a born winner :D !!</h1>
+    </div>
+
+    <!--page footer-->
+    <div class="footer">
+        <a class="aboutlink" href="https://github.com/dmachine7"><i class="fab fa-github"></i></a>
+        <h5>developed by <span id="nametag"><a href="https://dmachine7.github.io/">@dmachine7</a></span> </h5>
+        <a class="aboutlink" href="https://www.instagram.com/dmachine7_/"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!--JS files and code-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".loadingpage").fadeOut(3500);
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="gamefunction.js"></script>
+
+  </body>
+</html>

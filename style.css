@@ -1,0 +1,137 @@
+/*global*/
+body{
+  font-family: 'Press Start 2P', cursive;
+  padding: 0;
+  margin: 0;
+}
+/*loading screen*/
+.loadtext {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+.loadtext .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.loadingpage{
+  width: 98vw;
+  height: 100vh;
+  background-image: url("images/wall.png");
+  background-size: contain;
+  background-repeat: repeat;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/*header section*/
+.header{
+  height: 100px;
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  color: black;
+  text-shadow: 3px 3px 0 #ca5116,-4px -4px 0 #f1e3cb;
+  background-image: url("images/wall.png");
+  background-size: contain;
+}
+/*footer section*/
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 2px 2px 0 #ca5116,-2px -2px 0 #f1e3cb;
+  background-image: url("images/wall.png");
+  background-size: contain;
+}
+#nametag{
+  font-size: 32px;
+}
+.aboutlink{
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+/*main section*/
+.mainsrceen{
+  display: flex;
+  height: 500px;
+}
+/*panel subsection*/
+.panelHead{
+  padding: 15px;
+  font-size: 35px;
+  text-align: center;
+  margin: 30px 0;
+  text-shadow: -2px -2px 0 #f1e3cb;
+  cursor: default;
+}
+.panel{
+  width: 37%;
+  background-color: #ca5116;
+}
+#score{
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  margin: 20px 0;
+  text-shadow:-2px -2px 0 #f1e3cb;
+}
+#instructions{
+  text-align: center;
+  font-size: 15px;
+  margin: 10px 0;
+  text-shadow: none;
+}
+#levels{
+  display: block;
+}
+button{
+  background-color: #f1e3cb;
+  font-family: 'Press Start 2P', cursive;
+  outline: none;
+  border: none;
+  padding: 7px;
+}
+/*game subsection*/
+.game{
+  width: 63%;
+  background-color: #f9b384;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*endgame message styling*/
+#gameover,#winner{
+  font-size: 40px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  color: red;
+  text-shadow: 4px 4px 0 black,-4px -4px 0 black;
+  padding: 100px 0;
+}
+#gameover{
+  background-image: url("images/lose.png");
+  background-size: 20% 20%;
+}
+#winner{
+  color: green;
+  background-image: url("images/win.png");
+  background-size: 20% 20%;
+}
+/*styling brick canvas*/
+#brickCanvas{
+  display: flex;
+  background: #ddd;
+}
